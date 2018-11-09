@@ -1,0 +1,32 @@
+{
+	"table": {
+		"name": "热处理工艺及操作记录卡",
+		"points": [
+			{
+				"description" : "试验号",
+				"type": 0,
+				"location": "B4",
+				"index" : "it_testnum"
+			},
+			{
+				"description" : "试棒数量",
+				"type": 0,
+				"location": "C4",
+				"index" : "?"
+			},
+			{
+				"description" : "材料牌号",
+				"type": 0,
+				"location": "D4",
+				"index" : "it_materialnum"
+			},
+          {
+            "description" : "简介",
+            "type": 0,
+            "location": "E4",
+            "index" : "?"
+          }
+
+		]
+	}
+}

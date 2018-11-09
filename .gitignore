@@ -1,0 +1,4 @@
+.idea
+*.log
+public/files/in/*
+public/files/out/*

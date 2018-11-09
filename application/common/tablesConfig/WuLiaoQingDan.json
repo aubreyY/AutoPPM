@@ -1,0 +1,122 @@
+{
+	"table": {
+		"name": "物料清单",
+		"points": [{
+				"description" : "序号",
+				"type": 0,
+				"location": "A",
+				"index" : "it_order"
+			},
+			{
+				"description" : "路线表号",
+				"type": 0,
+				"location": "B",
+				"index" : "it_routnum"
+			},
+			{
+				"description" : "件号",
+				"type": 0,
+				"location": "C",
+				"index" : "it_partnum"
+			},
+			{
+				"description" : "图号",
+				"type": 0,
+				"location": "D",
+				"index" : "it_imagenum"
+			},
+
+			{
+				"description" : "工件名称",
+				"type": 0,
+				"location": "E",
+				"index" : "it_partname"
+			},
+
+			{
+				"description" : "材料牌号",
+				"type": 0,
+				"location": "F",
+				"index" : "it_materialnum"
+			},
+
+			{
+				"description" : "规格1",
+				"type": 0,
+				"location": "G",
+				"index" : "?"
+			},
+
+			{
+				"description" : "规格2",
+				"type": 0,
+				"location": "H",
+				"index" : "it_spec"
+			},
+
+			{
+				"description" : "下料尺寸0",
+				"type": 0,
+				"location": "I",
+				"index" : "it_quantity"
+			},
+
+			{
+				"description" : "下料尺寸1",
+				"type": 0,
+				"location": "J",
+				"index" : "it_quantity"
+			},
+
+			{
+				"description" : "下料尺寸2",
+				"type": 0,
+				"location": "K",
+				"index" : "it_quantity"
+			},
+
+			{
+				"description" : "下料尺寸3",
+				"type": 0,
+				"location": "L",
+				"index" : "it_quantity"
+			},
+
+			{
+				"description" : "重量",
+				"type": 0,
+				"location": "M",
+				"index" : "it_weight"
+			},
+
+			{
+				"description" : "炉（批）号",
+				"type": 0,
+				"location": "N",
+				"index" : "it_batchnum"
+			},
+
+			{
+				"description" : "报验号",
+				"type": 0,
+				"location": "O",
+				"index" : "it_reportnum"
+			},
+
+			{
+				"description" : "报验单号",
+				"type": 0,
+				"location": "P",
+				"index" : "it_reportsheetnum"
+			},
+
+			{
+				"description" : "试号",
+				"type": 0,
+				"location": "Q",
+				"index" : "it_testnum"
+			}
+
+		]
+	}
+}

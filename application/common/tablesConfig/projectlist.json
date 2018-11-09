@@ -1,0 +1,36 @@
+{
+	"table": {
+		"name": "自制件验收项目清单",
+		"points": [{
+				"description" : "序号",
+				"type": 0,
+				"location": "A5"
+			},
+			{
+				"description" : "图号",
+				"type": 0,
+				"location": "B5"
+			},
+			{
+				"description" : "工件名称",
+				"type": 0,
+				"location": "C8"
+			},
+			{
+				"description" : "材质牌号",
+				"type": 0,
+				"location": "D5"
+			},
+			{
+				"description" : "set",
+				"type": 0,
+				"location": "F5"
+			},
+			{
+				"description" : "报验单号",
+				"type": 0,
+				"location": "F1"
+			}
+		]
+	}
+}

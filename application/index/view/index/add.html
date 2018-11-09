@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div>上传输入文件</div>
+    <form action="{:url('uploads')}" enctype="multipart/form-data" method="post" target="myiframe">
+        <input type="file" name="file[]"/> <br>
+        <input type="file" name="file[]"/> <br>
+        <input type="file" name="file[]"/> <br>
+        <input id="sm" type="submit" value="上传">
+    </form>
+    <script>
+        var sm = document.getElementById("sm");
+        sm.onclick = function () {
+            alert("上传成功");
+        }
+    </script>
+
+    <iframe id = "myif "name="myiframe" width=0 height=0 scrolling="no"></iframe>
+
+
+
+    <form action="{:url('dataExtra')}" method="get">
+        <button type="submit"> 生成材料信息表 </button>
+    </form>
+    <div> 上传材料信息表 </div>
+    <form action="{:url('inforeupload')}" enctype="multipart/form-data" method="post">
+        <input type="file" name="infotable"/> <br>
+        <input type="submit" value="上传材料信息表">
+    </form>
+    <form action="{:url('infoExtra')}" method="get">
+        <button type="submit"> 生成 </button>
+    </form>
+    <div>生成的文件</div>
+    <form action="{:url('generateZhouZhuanKa')}" method="get">
+        <button type="submit"> 生成周转卡 </button>
+    </form>
+    <form action="{:url('generateWuLiaoQingDan')}" method="get">
+        <button type="submit"> 生成物料清单 </button>
+    </form>
+    <form action="{:url('generateDuanZhaoGongYiKa')}" method="get">
+        <button type="submit"> 生成锻造工艺卡 </button>
+    </form>
+    <div>下载文件</div>
+    <a href="../../../common/out/CaiLiaoXinXiBiao/材料信息表.xlsx" download="材料信息表.xlsx">下载物料清单</a>
+    <a href="../../../common/out/ZhouZhuanKa/1.xlsx" download="周转卡.xlsx">下载周转卡</a>
+    <a href="../../../common/out/WuLiaoQingDan/物料清单.xlsx" download="物料清单.xlsx">下载物料清单</a>
+
+</body>
+</html>

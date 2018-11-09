@@ -1,0 +1,93 @@
+{
+	"table": {
+		"name": "周转卡",
+		"points": [{
+				"description" : "检验编号",
+				"type": 0,
+				"location": "B6",
+				"index" : "it_reportnum"
+			},
+			{
+				"description" : "牌号",
+				"type": 0,
+				"location": "D6",
+				"index" : "it_materialnum"
+			},
+			{
+				"description" : "原料规格",
+				"type": 0,
+				"location": "H6",
+				"index" : "it_spec"
+			},
+			{
+				"description" : "炉批号",
+				"type": 0,
+				"location": "K6",
+				"index" : "it_batchnum"
+			},
+
+			{
+				"description" : "试号",
+				"type": 0,
+				"location": "M6",
+				"index" : "it_testnum"
+			},
+
+			{
+				"description" : "序号",
+				"type": 0,
+				"location": "M5",
+				"index" : "it_order"
+			},
+
+			{
+				"description" : "路线表号",
+				"type": 0,
+				"location": "B8",
+				"index" : "it_routnum"
+			},
+
+			{
+				"description" : "件号",
+				"type": 0,
+				"location": "G8",
+				"index" : "it_partnum"
+			},
+
+			{
+				"description" : "报验号",
+				"type": 0,
+				"location": "I8",
+				"index" : "it_reportsheetnum"
+			},
+
+			{
+				"description" : "产品质量证明书编号",
+				"type": 0,
+				"location": "C13",
+				"index" : "it_quaprovenum"
+			},
+
+
+			{
+				"description" : "材质证明单编号",
+				"type": 0,
+				"location": "J13",
+				"index" : "it_metaprovenum"
+			},
+
+			{
+				"description" : "第二页序号",
+				"type": 0,
+				"location": "M50",
+				"index" : "it_order"
+			}
+
+
+
+
+
+
+		]
+	}
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="ie9 lte9">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="__CSS__/main.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/info.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/bootstrap.css">
+    <script src="__JAVASCRIPT__/jquery-1.8.3.min.js"></script>
+    <script src="__JAVASCRIPT__/main.js"></script>
+    <script src="__JAVASCRIPT__/../layui/layer.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" style="padding:0;">
+        <nav class="navbar">
+            <img class="img-responsive" src="__IMAGE__/banner.png" alt="Responsive image">
+            <div id="processdiv" class="row">
+                <div class="col-md-1" style="padding: 0;">
+                    <img id="processcirid1" class="img-responsive" src="__IMAGE__/Grey circle.png" alt="Responsive image">
+                </div>
+                <div class="col-md-2" style="height: 10px;padding: 0;margin-left: -72px;margin-top: 16px;">
+                    <img id="processline1" class="img-responsive" src="__IMAGE__/Gray Line.png" alt="Responsive image">
+                </div>
+                <div class="col-md-1" style="padding: 0;">
+                    <img id="processcirid2" class="img-responsive" src="__IMAGE__/Grey circle.png" alt="Responsive image">
+                </div>
+                <div class="col-md-2" style="height: 10px;padding: 0;margin-left: -72px;margin-top: 16px;">
+                    <img id="processline2" class="img-responsive" src="__IMAGE__/Gray Line.png" alt="Responsive image">
+                </div>
+                <div class="col-md-1" style="padding: 0;">
+                    <img id="processcirid3" class="img-responsive" src="__IMAGE__/Grey circle.png" alt="Responsive image">
+                </div>
+                <div class="col-md-2" style="height: 10px;padding: 0;margin-left: -72px;margin-top: 16px;">
+                    <img id="processline3" class="img-responsive" src="__IMAGE__/Gray Line.png" alt="Responsive image">
+                </div>
+                <div class="col-md-1" style="padding: 0;">
+                    <img id="processcirid4" class="img-responsive" src="__IMAGE__/Grey circle.png" alt="Responsive image">
+                </div>
+            </div>
+        </nav>
+        <div class="row" style="margin: 0; margin-top: 4%;">
+            <div id="loadgif">
+                <img src="__IMAGE__/ling.gif" />
+                <div id="time_out">
+                    <span>生成中...</span>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    $("#loadgif").hide();
+                    $(".time_out").hide();
+                });
+            </script>
+            <!-- <div class="uploadzone"> -->
+            <div class="col-md-2" style="width: 15.666667%;border-right: 1px solid #ccc;">
+                <form action="{:url('uploads')}" enctype="multipart/form-data" method="post" target="myiframe">
+                    <label class="filelabel" style="cursor:pointer">
+                        <div class="fileicon" id="fileiconid">
+                            <input id="file1" class="uploadinput" style="position:absolute;opacity:0;" type="file" name="file[]" accept=".xlsx" />
+                            <img id="image1" class="fileimg" src="__IMAGE__/DefaultFile.png">
+                            <h6 align="center">报验清单</h6>
+                            <h6 align="center">上传</h6>
+                        </div>
+                    </label>
+                    <label class="filelabel" style="cursor:pointer">
+                        <div class="fileicon1" id="fileiconid1">
+                            <input id="file2" class="uploadinput" style="position:absolute;opacity:0;" type="file" name="file[]" accept=".xlsx" />
+                            <img id="image2" class="fileimg" src="__IMAGE__/DefaultFile.png">
+                            <h6 align="center">力化金材料证明</h6>
+                            <h6 align="center">上传</h6>
+                        </div>
+                    </label>
+                    <label class="filelabel" style="cursor:pointer">
+                        <div class="fileicon2" id="fileiconid2">
+                            <input id="file3" class="uploadinput" style="position:absolute;opacity:0;" type="file" name="file[]" accept=".xlsx" />
+                            <img id="image3" class="fileimg" src="__IMAGE__/DefaultFile.png">
+                            <h6 align="center">路线表号件号</h6>
+                            <h6 align="center">上传</h6>
+                        </div>
+                    </label>
+                    <label class="uploadlabel" style="cursor:pointer">
+                        <div id="uploadiconid" class="uploadicon">
+                            <input id="sm" style="position:absolute;opacity:0;" type="submit" />
+                            <img src="__IMAGE__/Upload output.png">
+                            <span class="splitline">|</span>
+                            <span class="uploadfile">上传文件</span>
+                        </div>
+                    </label>
+
+                </form>
+                <script>
+                    var sm = document.getElementById("sm");
+                    sm.onclick = function () {
+                        document.getElementById("infoid").style.background = "#4068c0";
+                        document.getElementById("infoid").style.pointerEvents = "all";
+                        var cir1 = document.getElementById("processcirid1");
+                        var line1 = document.getElementById("processline1");
+                        var Exc = document.getElementById("exce_img");
+                        Exc.src = "__IMAGE__/excel_1.png";
+                        cir1.src = "__IMAGE__/green.png";
+                        line1.src = "__IMAGE__/Green Line.png";
+                        //信息框-例1
+                        layer.open({
+                            title: '上传成功'
+                            , content: '报验清单、力化金已上传'
+                        });
+                        // alert("上传成功");
+                    }
+                </script>
+                <script>
+                    var fileupload = document.getElementById("file1");
+                    fileupload.onchange = function () {
+                        document.getElementById("image1").src = "__IMAGE__/UploadFile.png";
+                    }
+                </script>
+                <script>
+                    var fileupload = document.getElementById("file2");
+                    // var fileupload = document.getElementsByClassName("uploadinput");
+                    fileupload.onchange = function () {
+                        document.getElementById("image2").src = "__IMAGE__/UploadFile.png";
+                    }
+                </script>
+                <script>
+                    var fileupload = document.getElementById("file3");
+                    // var fileupload = document.getElementsByClassName("uploadinput");
+                    fileupload.onchange = function () {
+                        document.getElementById("image3").src = "__IMAGE__/UploadFile.png";
+                    }
+                </script>
+            </div>
+            <!-- <div class="infozone"> -->
+            <div class="col-md-3" style="border-right: 1px solid #ccc;width:34%;height: 578px;">
+                <label class="infolabel">
+                    <div id="infoid" class="geninfotable" style="cursor: pointer">
+                        <img src="__IMAGE__/generate.png" />
+                        <span class="generate">生成</span>
+                    </div>
+                    <div class="q_btn">
+                        <img src="__IMAGE__/q_btn.png">
+                    </div>
+                </label>
+                <div class="infotablediv" style="cursor: pointer;">
+                    <img id="exce_img" src="__IMAGE__/excel_2.png" />
+                    <span class="infotabledoc">材料信息表</span>
+                    <label class="infouploaddiv">
+                        <!--<form action="{:url('inforeupload')}" enctype="multipart/form-data" method="post" target="myiframe">-->
+                        <form action="{:url('inforeupload')}" enctype="multipart/form-data" method="post" target="myiframe">
+                            <label class="infouploadlabel_1" style="cursor:pointer;">
+                                <div class="infouploadicon">
+                                    <input id="inforefile" class="uploadinfo" style="position:absolute;opacity:0; width: 112px;" type="file" name="file[]" accept=".xlsx"
+                                    />
+                                    <span class="uploadtext" style="color: #fff">重选材料信息表</span>
+                                </div>
+                            </label>
+                            <label class="infouploadlabel_2">
+                                <div class="infouploadicon">
+                                    <input id="infosm" style="position:absolute;opacity:0;width:70px" type="submit" />
+                                    <span class="uploadtext" style="color: #fff">上传</span>
+                                    <img src="__IMAGE__/upload.png" />
+                                </div>
+                            </label>
+                        </form>
+                    </label>
+                    <label class="infodownloaddiv">
+                        <a href="__OUTPUTFILE__/CaiLiaoXinXiBiao/材料信息表.xlsx">
+                            <span class="downloadtext">下载</span>
+                            <input class="infodownload" type="image" src="__IMAGE__/download.png">
+                        </a>
+                    </label>
+                </div>
+                <script>
+                    var sm = document.getElementById("infosm");
+                    sm.onclick = function () {
+                        document.getElementById("infoid").style.background = "#4068c0";
+                        document.getElementById("infoid").style.pointerEvents = "all";
+                        var cir1 = document.getElementById("processcirid1");
+                        var line1 = document.getElementById("processline1");
+                        cir1.src = "__IMAGE__/green.png";
+                        line1.src = "__IMAGE__/Green Line.png";
+                        alert("上传成功");
+                    }
+                </script>
+                <div class="selector">
+                    <div class="select">
+                        <button class="select_toggle" type="button">请选择试号</button>
+                        <div class="select_menu">
+                            <div class="select_list">
+                                <ul id="testulid">
+                                    <li class="option">
+                                        <input id="selectall_1" class="allcase_1" name="all" type="radio" value="all">
+                                        <a href="#">全选</a>
+                                        <input id="selectall_2" class="allcase_2" name="all" type="radio" value="all">
+                                        <a href="#">取消</a>
+                                        <button class="select_btn">确定</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="__IMAGE__/time.png" />
+                    <h5 class="timespan" id="timespanid"></h5>
+                </div>
+                
+                <div class="excellist" id="tbl">
+                    <div id="table-head">
+                        <table width="100%" height="auto" cellspacing="0" cellpadding="0">
+                            <colgroup><col/><col/></colgroup>
+                            <thead>
+                                <tr class="tab_tr">
+                                        <td>
+                                            <input id="tab_th" type="checkbox" name="" value="all" />
+                                        </td>
+                                        <td>报验号</td>
+                                        <td>件号</td>
+                                        <td>图号</td>
+                                        <td>工件名称</td>
+                                        <td>材料牌号</td>
+                                        <td>规格</td>
+                                        <td>备料数量</td>
+                                        <td>炉（批）号</td>
+                                        <td>报验单号</td>
+                                        <td>试号</td>
+                                        <td>有效厚度</td>
+                                        <td>断口长度</td>
+                                        <td>产品质量证明书编号</td>
+                                        <td>材质证明单编号</td>
+                                        <td>（化）字</td>
+                                        <td>（力）字</td>
+                                        <td>(金）字</td>
+                                    </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    
+                    <div id="table-body">
+                        <table id="infotableid" width="100%" height="auto" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <colgroup><col/><col/></colgroup>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+            <iframe id="myif " name="myiframe" width=0 height=0 scrolling="no" hidden="hidden"></iframe>
+            <!-- <div class="generate1div"> -->
+            <div class="col-md-3" style="border-right: 1px solid #ccc;width:25%;height: 578px;">
+                <div id="g1id" class="g1table">
+                    <img src="__IMAGE__/generate.png" />
+                    <span class="g1">生成</span>
+                </div>
+
+                <div class="g1header">
+                    <input type="checkbox" class="checkheader1" id="dis1" disabled="true" />
+                    <h4 class="g1filename">文件名</h4>
+                    <h4 class="g1time">生成时间</h4>
+                    <h4 class="g1opt">操作</h4>
+                </div>
+                <div class="g1div">
+                    <input id="zzkcb" type="checkbox" class="g1checkheader" readonly="readonly" />
+                    <img id="zzkimg" src="http://localhost/__IMAGE__/excel_2.png" />
+                    <h4 class="g1lifilename">周转卡</h4>
+                    <a href="__OUTPUTFILE__/周转卡.zip" target="_blank">
+                        <input class="g1download1" type="image" src="__IMAGE__/tab_load_2.png">
+                    </a>
+                    </input>
+                    <h4 class="zzktime"></h4>
+                </div>
+                <div class="g1div">
+                    <input id="wlqdcb" type="checkbox" class="g1checkheader" readonly="readonly" />
+                    <img id="wlqdimg" src="__IMAGE__/excel_2.png" />
+                    <h4 class="g1lifilename">物料清单</h4>
+                    <a href="http://localhost/__OUTPUTFILE__/物料清单.zip" target="_blank">
+                        <input class="g1download2" type="image" src="__IMAGE__/tab_load_2.png"></input>
+                    </a>
+                    <h4 class="wlqdtime"></h4>
+                </div>
+                <div class="g1div">
+                    <input id="hlqdcb" type="checkbox" class="g1checkheader" readonly="readonly" />
+                    <img id="hlqdimg" src="__IMAGE__/excel_2.png" />
+                    <h4 class="g1lifilename">合炉清单</h4>
+                    <a href="__OUTPUTFILE__/合炉清单.zip" target="_blank">
+                        <input class="g1download3" type="image" src="__IMAGE__/tab_load_2.png"></input>
+                    </a>
+                    <h4 class="hlqdtime"></h4>
+                </div>
+            </div>
+            <!-- <div class="generate2div"> -->
+            <div class="col-md-3" style="width:25%;height: 578px;">
+                <div id="g2id" class="g2table">
+                    <img src="__IMAGE__/generate.png" />
+                    <span class="g2">生成</span>
+                </div>
+
+
+                <div class="g2header">
+                    <input type="checkbox" class="checkheader2" disabled="true" />
+                    <h4 class="g2filename">文件名</h4>
+                    <h4 class="g2time">生成时间</h4>
+                    <h4 class="g2opt">操作</h4>
+                </div>
+                <div class="g2div">
+                    <input id="dzgykcb" type="checkbox" class="g2checkheader" readonly="readonly" />
+                    <img id="dzgykimg" src="__IMAGE__/excel_2.png" />
+                    <h4 class="g2lifilename">锻造工艺卡</h4>
+                    <a href="__OUTPUTFILE__/锻造工艺卡.zip" target="_blank">
+                        <input class="g2download1" type="image" src="__IMAGE__/tab_load_2.png"></input>
+                    </a>
+                    <h4 class="dzgyktime"></h4>
+                </div>
+                <div class="g2div">
+                    <input id="rclgykcb" type="checkbox" class="g2checkheader" readonly="readonly" />
+                    <img id="rclgykimg" src="__IMAGE__/excel_2.png" />
+                    <h4 class="g2lifilename">热处理工艺卡</h4>
+                    <a href="__OUTPUTFILE__/热处理工艺卡.zip" target="_blank">
+                        <input class="g2download2" type="image" src="__IMAGE__/tab_load_2.png"></input>
+                    </a>
+                    <h4 class="rclgyktime"></h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+{
+    "table": {
+        "name": "锻造工艺及施工记录卡",
+        "points": [
+            {
+                "description": "产品",
+                "type": 0,
+                "location": "B3",
+                "index": "it_partname"
+            },
+            {
+                "description": "路线表号",
+                "type": 0,
+                "location": "B4",
+                "index": "it_routnum"
+            },
+            {
+                "description": "规格",
+                "type": 0,
+                "location": "C5",
+                "index": "it_spec"
+            },
+            {
+                "description": "炉批号",
+                "type": 0,
+                "location": "B6",
+                "index": "it_batchnum"
+            },
+            {
+                "description": "材料牌号",
+                "type": 0,
+                "location": "L3",
+                "index": "it_materialnum"
+            },
+            {
+                "description": "名称",
+                "type": 0,
+                "location": "L4",
+                "index": "it_partname"
+            },
+            {
+                "description": "试号",
+                "type": 0,
+                "location": "S1",
+                "index": "it_testnum"
+            },
+            {
+                "description": "图号",
+                "type": 0,
+                "location": "X1",
+                "index": "it_imagenum"
+            }
+        ]
+    }
+}

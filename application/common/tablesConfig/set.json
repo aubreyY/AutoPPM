@@ -1,0 +1,37 @@
+{
+	"table": {
+		"name": "关键参数",
+		"points": [{
+				"description" : "规格",
+				"type": 0,
+				"location": "零件由"
+			},
+			//未明确
+			{
+				"description" : "TBD",
+				"type": 0,
+				"location": "mm的"
+			},
+			{
+				"description" : "备料数量",
+				"type": 0,
+				"location": "，需"
+			},
+			{
+				"description" : "断口长度",
+				"type": 0,
+				"location": "断口试样"
+			},
+			{
+				"description" : "炉号",
+				"type": 0,
+				"location": "批号为"
+			},
+			{
+				"description" : "试号",
+				"type": 0,
+				"location": "试号为："
+			}
+		]
+	}
+}

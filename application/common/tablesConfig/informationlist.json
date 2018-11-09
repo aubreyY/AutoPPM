@@ -1,0 +1,101 @@
+{
+	"table": {
+		"name": "自制件验收项目清单",
+		"points": [{
+				"description" : "序号",
+				"type": 0,
+				"location": "A2"
+			},
+			{
+				"description" : "路线表号",
+				"type": 0,
+				"location": "B2"
+			},
+			{
+				"description" : "件号",
+				"type": 0,
+				"location": "C2"
+			},
+			{
+				"description" : "图号",
+				"type": 0,
+				"location": "D2"
+			},
+			{
+				"description" : "工件名称",
+				"type": 0,
+				"location": "E2"
+			},
+			{
+				"description" : "材料牌号",
+				"type": 0,
+				"location": "F2"
+			},
+			{
+				"description" : "规格",
+				"type": 0,
+				"location": "G2"
+			},
+			{
+				"description" : "备料数量",
+				"type": 0,
+				"location": "I2"
+			},
+			{
+				"description" : "备料重",
+				"type": 0,
+				"location": "M2"
+			},
+			{
+				"description" : "炉号",
+				"type": 0,
+				"location": "N2"
+			},
+			{
+				"description" : "报验号",
+				"type": 0,
+				"location": "O2"
+			},
+			{
+				"description" : "报验单号",
+				"type": 0,
+				"location": "P2"
+			},
+			{
+				"description" : "试号",
+				"type": 0,
+				"location": "Q2"
+			},
+			{
+				"description" : "断口长度",
+				"type": 0,
+				"location": "T2"
+			},
+			{
+				"description" : "质量证书",
+				"type": 0,
+				"location": "U2"
+			},
+			{
+				"description" : "材质证明单",
+				"type": 0,
+				"location": "V2"
+			},
+			{
+				"description" : "化学报告",
+				"type": 0,
+				"location": "W2"
+			},
+			{
+				"description" : "力学报告",
+				"type": 0,
+				"location": "X2"
+			},
+			{
+				"description" : "金相报告",
+				"type": 0,
+				"location": "Y2"
+			}
+		]
+	}
+}
